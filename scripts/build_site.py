@@ -16,8 +16,10 @@ for n, w, p in FONTS:
 (S / 'css' / 'styles.css').write_text(fcss + read('styles.css'), encoding='utf-8', newline='\n')
 (S / 'js' / 'assets.js').write_text('/* Remplacer un fichier du dossier img/ en gardant le même nom suffit. */\nconst A='
                                     + json.dumps(assets, indent=1, ensure_ascii=False) + ';\n', encoding='utf-8', newline='\n')
-for n in ['lib.js', 'scenes.js', 'engine.js']:
+for n in ['lib.js', 'scenes.js', 'engine.js', 'composer.js']:
     shutil.copy(SRC / n, S / 'js' / n)
+(S / 'composer').mkdir()
+shutil.copy(SRC / 'composer.html', S / 'composer' / 'index.html')
 h = read('shell.html')
 h = h.replace('<style>\n%%FONTS%%\n%%CSS%%\n</style>', '<link rel="stylesheet" href="css/styles.css">\n<link rel="icon" href="img/picto.png">')
 h = h.replace('%%PICTO%%', 'img/picto.png')
