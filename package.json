@@ -7,7 +7,9 @@
     "build": "python scripts/build.py && python scripts/build_site.py",
     "texts": "node scripts/render.mjs --timeline-only && python scripts/gen_text.py",
     "render:test": "node scripts/render.mjs --max 60",
-    "render": "node scripts/render.mjs && python scripts/gen_text.py"
+    "render": "node scripts/render.mjs && python scripts/gen_text.py",
+    "test": "node --test scripts/selection.test.mjs",
+    "check": "node scripts/check_video.mjs --compare build/reference.json --extraits"
   },
   "dependencies": {
     "@fontsource/ibm-plex-mono": "5.3.0",
