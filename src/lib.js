@@ -58,3 +58,27 @@ let HID=0;
 function hills(){const id='hc'+(HID++);return `<svg class="hills" viewBox="0 0 1920 1080" aria-hidden="true"><defs><clipPath id="${id}"><ellipse cx="380" cy="1470" rx="1260" ry="800"/></clipPath></defs><ellipse cx="380" cy="1470" rx="1260" ry="800" fill="#079959"/><ellipse cx="1720" cy="1530" rx="1240" ry="790" fill="#9AC035"/><ellipse cx="1720" cy="1530" rx="1240" ry="790" fill="#63B336" clip-path="url(#${id})"/></svg>`;}
 /* French typography: narrow no-break space before : ; ? ! » and after « */
 function fr(s){return s.replace(/ ([:;?!»])/g,'\u202F$1').replace(/« /g,'«\u202F');}
+/* Extrait à la carte : paramètre s="1.1-1.4,3.2" <-> numéros de scène, toujours dans l'ordre de la vidéo.
+   nums = numéros des scènes de contenu, dans l'ordre. Rien de reconnu : null (vidéo complète). */
+function parseSel(str,nums){
+  if(!str)return null;const pos=new Map(nums.map((n,i)=>[n,i])),on=new Set();
+  for(const tok of String(str).split(',')){const m=tok.trim().match(/^(\d+\.\d+)(?:-(\d+\.\d+))?$/);if(!m)continue;
+    const a=pos.get(m[1]),b=pos.get(m[2]||m[1]);if(a==null||b==null)continue;
+    for(let i=Math.min(a,b);i<=Math.max(a,b);i++)on.add(i);}
+  return on.size?[...on].sort((x,y)=>x-y).map(i=>nums[i]):null;}
+function compactSel(sel,nums){
+  const pos=new Map(nums.map((n,i)=>[n,i])),ch=n=>n.split('.')[0];
+  const ix=[...new Set(sel)].map(n=>pos.get(n)).filter(i=>i!=null).sort((x,y)=>x-y),out=[];
+  for(let k=0;k<ix.length;){let j=k;
+    while(j+1<ix.length&&ix[j+1]===ix[j]+1&&ch(nums[ix[j+1]])===ch(nums[ix[k]]))j++;
+    out.push(j>k?nums[ix[k]]+'-'+nums[ix[j]]:nums[ix[k]]);k=j+1;}
+  return out.join(',');}
+/* Scènes jouées pour une sélection : ouverture réduite (brief), cartons refaits (card), chapitres vides retirés.
+   Renvoie de nouveaux objets : sc n'est pas modifié. */
+function selectScenes(sc,sel){const keep=new Set(sel);
+  return sc.flatMap(s=>{
+    if(s.kind==='intro')return [Object.assign({},s,s.brief())];
+    if(s.kind==='chap'){const ranks=sc.filter(c=>c.kind==='content'&&c.ch===s.ch&&keep.has(c.num)).map(c=>+c.num.split('.')[1]);
+      return ranks.length?[Object.assign({},s,{html:s.card(ranks)})]:[];}
+    if(s.kind==='content')return keep.has(s.num)?[s]:[];
+    return [s];});}
