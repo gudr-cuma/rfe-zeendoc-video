@@ -42,7 +42,7 @@ npm run check               # vidéo complète identique à build/reference.json
 
 **Mise en ligne** : Cloudflare Pages publie `dist/rfe-zeendoc` tel qu'il est dans le dépôt GitHub `gudr-cuma/rfe-zeendoc-video` (branche `main`), sans commande de construction. Lancer `npm run build` et committer `dist/` avant chaque push, sinon le site publié ne reflète pas les sources.
 
-Le rendu nécessite ffmpeg 5.1 ou plus récent (option `-fps_mode`). Options de `scripts/render.mjs` :
+La construction nécessite Python 3.10 ou plus récent (fichiers écrits en fins de ligne LF). Le rendu nécessite ffmpeg 5.1 ou plus récent (option `-fps_mode`). Options de `scripts/render.mjs` :
 - `--workers N` : pages en parallèle ;
 - `--max N` : test sur N images ;
 - `--fps` : cadence d'images ;

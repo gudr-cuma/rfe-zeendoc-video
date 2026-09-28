@@ -10,6 +10,8 @@ const args = process.argv.slice(2);
 const opt = k => { const i = args.indexOf('--' + k); return i < 0 ? null : args[i + 1] || true; };
 const html = path.join(ROOT, 'dist', 'rfe-zeendoc-video.html');
 if (!fs.existsSync(html)) { console.error('Page absente : lancer d\'abord « npm run build ».'); process.exit(1); }
+if (opt('compare') && !opt('save') && !fs.existsSync(path.resolve(ROOT, opt('compare')))) {
+  console.error(`Référence absente : ${opt('compare')}. La créer depuis une version validée avec « node scripts/check_video.mjs --save ${opt('compare')} ».`); process.exit(1); }
 const browser = await puppeteer.launch({ headless: true, executablePath: process.env.CHROME_PATH || undefined,
   args: ['--no-sandbox', '--allow-file-access-from-files', ...(process.env.CHROME_ARGS ? process.env.CHROME_ARGS.split(' ') : [])],
   defaultViewport: { width: 1920, height: 1080 } });
@@ -50,9 +52,9 @@ try {
     check('cartons limités aux scènes retenues', () => assert.deepEqual(dom.cards, [['1.1', '1.2'], ['3.2', '3.3', '3.5']]));
     check('délai recalculé selon le rang filtré', () => assert.equal(+dom.delays, .55 + 2 * .1));
     check('bandeau limité aux chapitres présents', () => assert.deepEqual(dom.tabs, ['1', '3']));
-    for (const q of ['&s=', '&s=9.9,abc', '&s=4.9-5.1']) {
+    for (const q of ['&s=', '&s=9.9,abc', '&s=4.9-5.1', '&s=1.1-4.8']) {
       const g = await load(q);
-      check(`sélection vide ou inconnue (${q}) : vidéo complète`, () => assert.deepEqual(g.tl, full.tl));
+      check(`sélection vide, inconnue ou complète (${q}) : vidéo complète`, () => assert.deepEqual(g.tl, full.tl));
     }
   }
   check('aucune erreur JavaScript dans la page', () => assert.deepEqual(errors, []));

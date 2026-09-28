@@ -17,7 +17,9 @@ const words=t=>{t=(t||'').trim();return t?t.split(/\s+/).length:0;};
 const splitS=t=>t.split(/(?<=[.!?…])\s+(?=[A-ZÀÂÇÉÈÊËÎÏÔÛÙÜŸ«0-9])/).filter(Boolean);
 
 /* ---------- extrait à la carte (?s=1.1-1.4,3.2) ---------- */
-const SEL=parseSel(new URLSearchParams(location.search).get('s'),SC.filter(s=>s.kind==='content').map(s=>s.num));
+const NUMS=SC.filter(s=>s.kind==='content').map(s=>s.num);
+let SEL=parseSel(new URLSearchParams(location.search).get('s'),NUMS);
+if(SEL&&SEL.length===NUMS.length)SEL=null; /* tout retenu : vidéo complète */
 if(SEL)SC.splice(0,SC.length,...selectScenes(SC,SEL));
 const CHS=[1,2,3,4].filter(n=>SC.some(s=>s.kind==='chap'&&s.ch===n));
 
