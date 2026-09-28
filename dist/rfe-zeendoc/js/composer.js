@@ -15,7 +15,7 @@ const box=$('chs');
 [1,2,3,4].forEach(n=>{const sc=CONTENT.filter(s=>s.ch===n);const d=document.createElement('section');d.className='chb';
   d.innerHTML=`<div class="chh"><label><input type="checkbox" data-ch="${n}"><span>${n}. ${txt(CH[n])}</span></label>
     <span class="cnt" data-cnt="${n}"></span>
-    <button class="btn" aria-expanded="false" aria-controls="l${n}">Détail</button></div>
+    <button class="btn" aria-expanded="false" aria-controls="l${n}" aria-label="Détail du chapitre ${txt(CH[n])}">Détail</button></div>
     <ol id="l${n}" hidden>${sc.map(s=>`<li><label><input type="checkbox" data-num="${s.num}"><span class="num">${s.num}</span><span>${txt(s.title)}</span></label></li>`).join('')}</ol>`;
   box.appendChild(d);});
 box.addEventListener('click',e=>{const b=e.target.closest('button[aria-controls]');if(!b)return;
