@@ -1,0 +1,28 @@
+/* Remplacer un fichier du dossier img/ en gardant le même nom suffit. */
+const A={
+ "f01_cgu": "img/f01_cgu.png",
+ "f01_lien": "img/f01_lien.png",
+ "f01_mail": "img/f01_mail.png",
+ "f01_mdp": "img/f01_mdp.png",
+ "f02_accueil": "img/f02_accueil.png",
+ "f02_actions": "img/f02_actions.png",
+ "f02_facture": "img/f02_facture.png",
+ "f02_liste": "img/f02_liste.png",
+ "f06_accueil": "img/f06_accueil.png",
+ "f06_disquette": "img/f06_disquette.png",
+ "f06_expert": "img/f06_expert.png",
+ "f06_param": "img/f06_param.png",
+ "f07_accueil": "img/f07_accueil.png",
+ "f07_colonnes": "img/f07_colonnes.png",
+ "f07_enregistrer": "img/f07_enregistrer.png",
+ "f07_rechercher": "img/f07_rechercher.png",
+ "f07_roue": "img/f07_roue.png",
+ "f08_bouton": "img/f08_bouton.png",
+ "f08_codes": "img/f08_codes.png",
+ "f08_effacer": "img/f08_effacer.png",
+ "f08_montant": "img/f08_montant.png",
+ "f08_texte": "img/f08_texte.png",
+ "f08_valider": "img/f08_valider.png",
+ "logo_white": "img/logo_white.png",
+ "picto": "img/picto.png"
+};

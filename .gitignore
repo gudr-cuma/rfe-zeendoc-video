@@ -1,0 +1,7 @@
+node_modules/
+build/
+dist/*.mp4
+dist/timeline.json
+__pycache__/
+*.zip
+sources/fiches/

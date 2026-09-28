@@ -1,0 +1,18 @@
+{
+  "name": "rfe-zeendoc-video",
+  "private": true,
+  "type": "module",
+  "description": "Vidéo animée « Vos factures fournisseur dans Zeendoc » pour les trésoriers de Cuma",
+  "scripts": {
+    "build": "python scripts/build.py && python scripts/build_site.py",
+    "texts": "node scripts/render.mjs --timeline-only && python scripts/gen_text.py",
+    "render:test": "node scripts/render.mjs --max 60",
+    "render": "node scripts/render.mjs && python scripts/gen_text.py"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@fontsource/ibm-plex-sans": "5.3.0",
+    "@fontsource/montserrat": "5.3.0",
+    "puppeteer": "^24.0.0"
+  }
+}

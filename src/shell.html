@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Facturation électronique : vos factures fournisseur dans Zeendoc</title>
+<style>
+%%FONTS%%
+%%CSS%%
+</style>
+</head>
+<body>
+<main class="player">
+  <header class="ph">
+    <img src="%%PICTO%%" alt="">
+    <div><h1>Vos factures fournisseur dans Zeendoc</h1>
+    <p>Facturation électronique, pour les trésoriers de Cuma. État en septembre 2026.</p></div>
+  </header>
+  <div class="screen" id="screen">
+    <div class="stage" id="stage"></div>
+    <div class="startov" id="startov">
+      <button class="bigplay" id="startBtn"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>Lancer la vidéo</button>
+      <p>La narration est lue par la voix de synthèse de votre navigateur. Durée : environ 15 minutes.</p>
+    </div>
+  </div>
+  <div class="prog" id="prog" role="presentation"><div class="fill" id="fill"></div></div>
+  <div class="controls">
+    <button class="btn" id="prev" aria-label="Scène précédente"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <button class="btn primary" id="pp" aria-label="Lecture"></button>
+    <button class="btn" id="next" aria-label="Scène suivante"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+    <div class="where" id="where" aria-live="polite"></div>
+    <label class="sel">Voix <select id="voice"></select></label>
+    <label class="sel">Vitesse <select id="rate"><option value="0.9">0,9</option><option value="1" selected>1</option><option value="1.1">1,1</option><option value="1.25">1,25</option></select></label>
+    <button class="btn" id="capt" aria-pressed="true">Sous-titres</button>
+    <button class="btn" id="fs" aria-label="Plein écran"><svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg></button>
+  </div>
+  <p class="cap" id="cap" aria-live="polite"></p>
+  <p class="pnote" id="vnote" hidden>Aucune voix française n'est disponible dans ce navigateur : la vidéo défile avec les sous-titres. Les navigateurs Edge et Chrome proposent en général des voix françaises.</p>
+  <nav class="chapters" id="chapters" aria-label="Chapitres"></nav>
+  <p class="pnote">Contenu tiré des fiches pratiques Facturation électronique n°01 à 08 du réseau Cuma (septembre 2026). Une question : votre référent Fédération / AGC.</p>
+</main>
+<script>
+const A=%%ASSETS%%;
+%%LIB%%
+%%SCENES%%
+%%ENGINE%%
+</script>
+</body>
+</html>

@@ -1,0 +1,973 @@
+1
+00:00:00,800 --> 00:00:02,888
+Depuis le 1er septembre 2026,
+
+2
+00:00:02,928 --> 00:00:08,034
+votre Cuma doit pouvoir recevoir ses factures
+fournisseur via une plateforme agréée.
+
+3
+00:00:08,234 --> 00:00:12,064
+Dans le réseau Cuma, vous
+les retrouvez dans Zeendoc.
+
+4
+00:00:12,414 --> 00:00:15,353
+Cette vidéo présente la
+connexion, le paramétrage,
+
+5
+00:00:15,393 --> 00:00:19,222
+l’usage au quotidien, puis les
+informations générales à connaître.
+
+6
+00:00:25,972 --> 00:00:29,802
+Tout se passe sur un
+seul site : ged.cuma.fr.
+
+7
+00:00:30,002 --> 00:00:32,555
+Gardez cette adresse dans vos favoris.
+
+8
+00:00:34,205 --> 00:00:39,737
+L’activation se fait une seule fois, en
+quatre étapes, en cinq minutes environ.
+
+9
+00:00:40,287 --> 00:00:42,840
+Première étape : ouvrez
+l’e-mail d’invitation.
+
+10
+00:00:43,040 --> 00:00:46,830
+Il provient d’une adresse
+Zeendoc et contient un lien,
+
+11
+00:00:46,870 --> 00:00:50,700
+valable vingt-quatre heures,
+pour définir votre mot de passe.
+
+12
+00:00:50,900 --> 00:00:53,879
+Pensez à regarder dans vos
+courriers indésirables.
+
+13
+00:00:54,029 --> 00:00:57,007
+Deuxième étape : acceptez
+les conditions d’utilisation.
+
+14
+00:00:57,207 --> 00:01:00,146
+Faites défiler le texte jusqu’en bas ;
+
+15
+00:01:00,186 --> 00:01:04,867
+le bouton de validation ne s’active
+qu’une fois le texte parcouru.
+
+16
+00:01:05,217 --> 00:01:08,621
+Troisième étape : choisissez
+votre mot de passe.
+
+17
+00:01:08,821 --> 00:01:13,888
+Les exigences sont strictes : lisez
+la liste affichée avant de valider,
+
+18
+00:01:13,928 --> 00:01:16,481
+et notez-le dans un endroit sûr.
+
+19
+00:01:16,831 --> 00:01:20,661
+Quatrième étape : renseignez vos
+quatre questions de sécurité.
+
+20
+00:01:20,861 --> 00:01:23,839
+La quatrième, c’est vous qui la rédigez.
+
+21
+00:01:24,039 --> 00:01:27,018
+Ces réponses servent à
+récupérer votre accès.
+
+22
+00:01:27,168 --> 00:01:28,179
+C’est terminé.
+
+23
+00:01:28,219 --> 00:01:29,456
+Les fois suivantes,
+
+24
+00:01:29,496 --> 00:01:34,177
+vous vous connectez avec votre
+identifiant et votre mot de passe.
+
+25
+00:01:35,827 --> 00:01:38,805
+Mot de passe perdu ou expiré ?
+
+26
+00:01:39,005 --> 00:01:45,814
+Le lien « Mot de passe perdu » vous demande
+les réponses à vos quatre questions.
+
+27
+00:01:46,014 --> 00:01:51,080
+Le plus simple est de contacter
+votre référent Fédération ou AGC :
+
+28
+00:01:51,120 --> 00:01:55,801
+il fait envoyer un nouveau lien de
+réinitialisation, valable vingt-quatre heures.
+
+29
+00:01:55,951 --> 00:02:00,166
+Si votre lien a dépassé vingt-quatre
+heures, cliquez dessus :
+
+30
+00:02:00,206 --> 00:02:03,611
+vous pourrez demander à
+en recevoir un nouveau.
+
+31
+00:02:05,461 --> 00:02:09,676
+Lorsque la fonction de trésorier
+est retirée dans myCuma Infinity,
+
+32
+00:02:09,716 --> 00:02:11,844
+le compte est désactivé automatiquement.
+
+33
+00:02:12,394 --> 00:02:18,351
+En cas de changement de trésorier ou de
+président, pensez à transférer les accès.
+
+34
+00:02:25,101 --> 00:02:28,080
+Deux réglages : l’affichage,
+puis une alerte.
+
+35
+00:02:28,630 --> 00:02:31,994
+Pour personnaliser les blocs
+de votre interface d’accueil,
+
+36
+00:02:32,034 --> 00:02:35,438
+cliquez sur le bouton en haut à droite.
+
+37
+00:02:37,288 --> 00:02:41,078
+Pour choisir les colonnes
+de la liste des factures,
+
+38
+00:02:41,118 --> 00:02:47,076
+lancez d’abord une recherche avec le
+bouton « Rechercher », en bas à gauche.
+
+39
+00:02:47,626 --> 00:02:51,841
+Cliquez ensuite sur la roue
+crantée, en haut à droite,
+
+40
+00:02:51,881 --> 00:02:55,711
+puis sur « Modifier le
+tableau de résultats ».
+
+41
+00:02:56,261 --> 00:02:58,388
+Chaque bouton ajoute une colonne.
+
+42
+00:02:58,588 --> 00:03:02,804
+Pour en retirer une, cliquez
+dessus dans la première ligne,
+
+43
+00:03:02,844 --> 00:03:08,376
+celle des boutons verts ; pour changer
+l’ordre, faites glisser ces boutons verts.
+
+44
+00:03:08,726 --> 00:03:11,239
+Activez ensuite les deux choix proposés,
+
+45
+00:03:11,279 --> 00:03:15,069
+surtout « Sauvegarder les
+modifications dans mes préférences »,
+
+46
+00:03:15,109 --> 00:03:17,662
+puis cliquez sur « Valider ».
+
+47
+00:03:19,512 --> 00:03:25,469
+Le second réglage vous envoie par e-mail
+la liste de vos factures à valider.
+
+48
+00:03:25,669 --> 00:03:29,073
+Cinq étapes, cinq minutes
+environ, une seule fois.
+
+49
+00:03:29,423 --> 00:03:33,679
+Un : lancez une recherche
+en mode « Expert ».
+
+50
+00:03:33,879 --> 00:03:38,945
+Choisissez le critère « FE - Statut
+de traitement des factures »,
+
+51
+00:03:38,985 --> 00:03:44,517
+puis « est égal à », puis
+« Reçue de la PA-R ».
+
+52
+00:03:44,717 --> 00:03:49,398
+Cette recherche liste les factures pas
+encore validées par le réceptionnaire.
+
+53
+00:03:49,548 --> 00:03:52,912
+Deux : enregistrez-la en
+cliquant sur la disquette,
+
+54
+00:03:52,952 --> 00:03:57,633
+en bas à gauche, à côté
+du bouton « Rechercher ».
+
+55
+00:03:58,183 --> 00:04:04,140
+Trois : nommez la recherche, par exemple
+« Mes factures reçues non validées ».
+
+56
+00:04:04,340 --> 00:04:08,981
+Activez « Recevoir régulièrement la liste
+des nouveaux documents correspondants »,
+
+57
+00:04:09,021 --> 00:04:12,000
+puis choisissez les
+jours et l’heure d’envoi.
+
+58
+00:04:12,350 --> 00:04:13,627
+Quatre : validez.
+
+59
+00:04:13,827 --> 00:04:16,765
+La recherche apparaît sur
+votre interface d’accueil,
+
+60
+00:04:16,805 --> 00:04:19,784
+dans le bloc « Autres éléments ».
+
+61
+00:04:19,984 --> 00:04:23,774
+Le chiffre indique le nombre
+de factures concernées ;
+
+62
+00:04:23,814 --> 00:04:25,941
+cliquez dessus pour les afficher.
+
+63
+00:04:26,091 --> 00:04:29,456
+Cinq : pour modifier l’alerte,
+relancez la recherche,
+
+64
+00:04:29,496 --> 00:04:34,177
+cliquez de nouveau sur la disquette,
+ajustez les paramètres et validez.
+
+65
+00:04:36,027 --> 00:04:39,431
+Les e-mails partent sur
+l’adresse de votre compte.
+
+66
+00:04:39,631 --> 00:04:43,846
+Leur contenu et leur fréquence
+se règlent par utilisateur ;
+
+67
+00:04:43,886 --> 00:04:46,439
+aucune alerte n’est imposée par défaut.
+
+68
+00:04:46,639 --> 00:04:50,429
+Certaines fédérations ont déjà
+pré-paramétré une alerte hebdomadaire :
+
+69
+00:04:50,469 --> 00:04:51,746
+attention aux doublons.
+
+70
+00:04:51,896 --> 00:04:55,726
+Aucun texte n’impose de délai
+pour valider une facture.
+
+71
+00:04:55,926 --> 00:04:58,439
+La logique de l’administration fiscale :
+
+72
+00:04:58,479 --> 00:05:04,011
+la valider avant sa date d’échéance,
+puisqu’elle doit être payée à cette date.
+
+73
+00:05:04,361 --> 00:05:09,853
+Des factures jamais validées qui s’accumulent
+peuvent valoir un rappel à l’ordre en
+
+74
+00:05:09,893 --> 00:05:11,169
+cas de contrôle.
+
+75
+00:05:11,719 --> 00:05:13,807
+La préconisation du réseau :
+
+76
+00:05:13,847 --> 00:05:19,379
+se connecter au moins une fois par
+semaine, à adapter selon votre volume.
+
+77
+00:05:26,129 --> 00:05:31,195
+Sur l’interface d’accueil, le panneau de
+recherche permet de filtrer par date,
+
+78
+00:05:31,235 --> 00:05:33,323
+numéro de facture ou fournisseur,
+
+79
+00:05:33,363 --> 00:05:38,044
+et les encadrés du tableau de bord
+lancent des recherches rapides.
+
+80
+00:05:38,594 --> 00:05:42,809
+Pour afficher toutes vos factures,
+cliquez sur « Rechercher »,
+
+81
+00:05:42,849 --> 00:05:49,232
+en bas à gauche : la liste présente toutes
+les factures adressées à votre Cuma.
+
+82
+00:05:49,782 --> 00:05:53,186
+Cliquez sur une ligne
+pour ouvrir la facture.
+
+83
+00:05:53,386 --> 00:05:58,027
+À gauche, les index : les informations
+qui caractérisent la facture,
+
+84
+00:05:58,067 --> 00:05:59,769
+modifiables selon vos droits.
+
+85
+00:05:59,969 --> 00:06:02,097
+À droite, les actions possibles.
+
+86
+00:06:03,547 --> 00:06:09,039
+À réception, vous faites ce que vous
+faisiez en ouvrant une enveloppe :
+
+87
+00:06:09,079 --> 00:06:14,185
+vérifier que la facture concerne
+bien la Cuma, et contrôler les prix.
+
+88
+00:06:14,385 --> 00:06:16,938
+Puis vous choisissez entre trois gestes.
+
+89
+00:06:17,288 --> 00:06:20,267
+La facture est correcte :
+vous l’approuvez.
+
+90
+00:06:20,467 --> 00:06:24,297
+Sans ce geste, elle ne
+descendra pas en comptabilité.
+
+91
+00:06:24,647 --> 00:06:30,179
+Vous contestez le prix ou les
+quantités : vous la mettez en litige.
+
+92
+00:06:30,379 --> 00:06:35,445
+La facture reste dans le circuit,
+et ce statut est réversible :
+
+93
+00:06:35,485 --> 00:06:40,166
+vous pouvez demander un avoir, ou
+valider si le fournisseur s’explique.
+
+94
+00:06:40,516 --> 00:06:45,157
+Le refus, lui, est encadré
+par la loi et définitif :
+
+95
+00:06:45,197 --> 00:06:49,878
+la facture sort du système et
+ne peut pas être réintégrée.
+
+96
+00:06:51,728 --> 00:06:56,409
+Un refus est toujours motivé, et
+seuls trois motifs le permettent.
+
+97
+00:06:56,959 --> 00:07:01,599
+Une mention obligatoire manque, que la
+plateforme ne pouvait pas détecter,
+
+98
+00:07:01,639 --> 00:07:06,746
+notamment le numéro de bon de commande
+alors que vous l’aviez établi.
+
+99
+00:07:07,296 --> 00:07:12,828
+La transaction est inconnue : vous ne
+connaissez ni le fournisseur, ni l’opération.
+
+100
+00:07:13,378 --> 00:07:17,167
+Ou les conditions du contrat
+ne sont pas respectées,
+
+101
+00:07:17,207 --> 00:07:20,612
+au point d’empêcher réellement
+de traiter la facture.
+
+102
+00:07:21,162 --> 00:07:28,356
+Un écart de prix, de quantité ou de
+taux de TVA ne justifie pas un refus :
+
+103
+00:07:28,396 --> 00:07:30,523
+il se traite en litige.
+
+104
+00:07:30,723 --> 00:07:33,277
+Au moindre doute, c’est le litige.
+
+105
+00:07:34,927 --> 00:07:37,480
+Trois situations à ne pas confondre.
+
+106
+00:07:38,030 --> 00:07:41,820
+Une facture rejetée est
+bloquée par la plateforme :
+
+107
+00:07:41,860 --> 00:07:43,987
+fichier illisible,
+doublon, adresse erronée.
+
+108
+00:07:44,187 --> 00:07:49,719
+Vous ne la recevez jamais ; le
+fournisseur la corrige et la réémet.
+
+109
+00:07:50,069 --> 00:07:55,176
+Une facture refusée est bien arrivée :
+le fournisseur régularise et refacture.
+
+110
+00:07:55,726 --> 00:07:59,515
+Une facture en litige
+reste dans le circuit ;
+
+111
+00:07:59,555 --> 00:08:04,662
+elle se règle par un avoir ou une
+facture rectificative du fournisseur.
+
+112
+00:08:06,512 --> 00:08:10,301
+Un refus écarte la facture
+du pré-remplissage de TVA,
+
+113
+00:08:10,341 --> 00:08:13,320
+et le fournisseur l’annule
+dans ses comptes.
+
+114
+00:08:13,870 --> 00:08:18,086
+Si elle avait déjà été comptabilisée,
+l’écriture est annulée ;
+
+115
+00:08:18,126 --> 00:08:23,232
+le statut « Refusée » sert alors de
+pièce justificative, à conserver.
+
+116
+00:08:23,782 --> 00:08:27,146
+Enfin, refusez vite, ou pas du tout :
+
+117
+00:08:27,186 --> 00:08:31,867
+après la période de pré-remplissage,
+un refus n’a plus d’effet fiscal.
+
+118
+00:08:32,067 --> 00:08:34,195
+Au-delà, on utilise le litige.
+
+119
+00:08:35,845 --> 00:08:39,634
+Le seul statut obligatoire en
+réception est automatique :
+
+120
+00:08:39,674 --> 00:08:43,039
+la plateforme signale
+qu’elle a reçu la facture,
+
+121
+00:08:43,079 --> 00:08:46,057
+ou la rejette pour un motif technique.
+
+122
+00:08:46,607 --> 00:08:51,248
+Le bouton « payé », lui, est
+facultatif en réception :
+
+123
+00:08:51,288 --> 00:08:55,969
+il transmet un statut au fournisseur,
+mais ne déclenche aucun paiement.
+
+124
+00:08:56,169 --> 00:08:58,297
+Il deviendra obligatoire à l’encaissement.
+
+125
+00:08:59,947 --> 00:09:06,330
+Pour annoter une facture, utilisez « Ajouter
+une note », dans le bandeau de droite.
+
+126
+00:09:06,530 --> 00:09:09,083
+La note s’ajoute sans modifier l’original.
+
+127
+00:09:09,433 --> 00:09:15,350
+Elle est visible dans la plateforme,
+mais ne part pas vers la comptabilité :
+
+128
+00:09:15,390 --> 00:09:19,646
+le comptable ne la voit
+que s’il ouvre la facture.
+
+129
+00:09:21,496 --> 00:09:25,286
+L’assistant analytique, développé
+par Zeendoc pour le réseau Cuma,
+
+130
+00:09:25,326 --> 00:09:30,006
+sert à saisir l’analytique et le
+matériel concernés par une facture.
+
+131
+00:09:30,206 --> 00:09:34,036
+Il remplace les annotations
+manuelles sur la facture papier.
+
+132
+00:09:34,386 --> 00:09:39,027
+Facture ouverte, cliquez sur le bouton
+orange « Assistant analytique »,
+
+133
+00:09:39,067 --> 00:09:41,195
+dans le menu de droite.
+
+134
+00:09:41,745 --> 00:09:48,513
+À gauche s’affiche la facture ; à droite,
+la saisie en quatre colonnes : le libellé,
+
+135
+00:09:48,553 --> 00:09:53,620
+en texte libre ; le code analytique,
+c’est-à-dire le matériel concerné ;
+
+136
+00:09:53,660 --> 00:09:57,064
+la quantité ; et le montant hors taxes.
+
+137
+00:09:58,914 --> 00:10:03,555
+Pour créer une ligne, cliquez
+sur « Ajouter une ligne »,
+
+138
+00:10:03,595 --> 00:10:09,552
+ou directement sur un montant de la
+facture : la ligne reprend ce montant.
+
+139
+00:10:10,102 --> 00:10:12,230
+Même principe pour le texte.
+
+140
+00:10:12,430 --> 00:10:14,132
+Le libellé reste libre.
+
+141
+00:10:14,482 --> 00:10:20,439
+Choisissez ensuite le code dans la liste,
+en tapant un mot pour le rechercher.
+
+142
+00:10:20,639 --> 00:10:26,171
+Les codes proposés sont ceux de
+votre Cuma, mis à jour chaque nuit.
+
+143
+00:10:26,371 --> 00:10:31,903
+Une nouvelle ligne est par
+défaut sur « 0 / A affecter ».
+
+144
+00:10:33,353 --> 00:10:35,866
+Une ligne correspond à un matériel,
+
+145
+00:10:35,906 --> 00:10:39,696
+et peut regrouper plusieurs
+lignes de la facture :
+
+146
+00:10:39,736 --> 00:10:40,547
+par exemple,
+
+147
+00:10:40,587 --> 00:10:46,970
+75,60 euros et 190 euros sur le même
+code donnent une ligne de 265,60 euros.
+
+148
+00:10:47,520 --> 00:10:53,052
+Pour terminer, cliquez sur « Valider
+la facture », en bas à droite.
+
+149
+00:10:53,252 --> 00:10:57,893
+« Enregistrer en brouillon »
+permet de reprendre plus tard ;
+
+150
+00:10:57,933 --> 00:11:03,039
+« Tout effacer », en haut à
+droite, de repartir de zéro.
+
+151
+00:11:09,589 --> 00:11:11,717
+Ce dossier fonctionne à trois.
+
+152
+00:11:12,267 --> 00:11:17,759
+La Cuma : le trésorier ouvre,
+vérifie et valide ; seule la Cuma,
+
+153
+00:11:17,799 --> 00:11:21,629
+destinataire de la facture,
+peut la valider ou l’infirmer.
+
+154
+00:11:22,179 --> 00:11:24,692
+La fédération : l’animateur vous forme,
+
+155
+00:11:24,732 --> 00:11:31,115
+vous dépanne et répond à vos questions ;
+il ne saisit pas à votre place.
+
+156
+00:11:31,665 --> 00:11:36,306
+Le centre comptable : la saisie
+comptable reste de son ressort,
+
+157
+00:11:36,346 --> 00:11:39,750
+et il télécharge les
+factures une fois validées.
+
+158
+00:11:40,300 --> 00:11:45,832
+Ce téléchargement reste bloqué tant
+que la Cuma n’a pas validé la facture.
+
+159
+00:11:47,682 --> 00:11:51,472
+Une facture électronique n’arrive
+pas par une adresse e-mail,
+
+160
+00:11:51,512 --> 00:11:56,193
+mais via le SIREN : c’est lui,
+l’adresse électronique de facturation.
+
+161
+00:11:56,743 --> 00:12:03,086
+C’est aussi lui qui sépare le dossier de
+la Cuma de celui de l’exploitation d’un
+
+162
+00:12:03,126 --> 00:12:04,061
+adhérent.
+
+163
+00:12:04,101 --> 00:12:07,891
+Communiquez le bon SIREN à
+vos fournisseurs : sinon,
+
+164
+00:12:07,931 --> 00:12:12,186
+la facture peut être rejetée
+ou ne pas être distribuée.
+
+165
+00:12:14,036 --> 00:12:18,717
+Le réseau a interopéré une seule
+plateforme avec le logiciel métier.
+
+166
+00:12:19,267 --> 00:12:22,631
+Une Cuma reste libre
+d’en choisir une autre,
+
+167
+00:12:22,671 --> 00:12:26,887
+mais elle perd la remontée
+automatique vers la comptabilité :
+
+168
+00:12:26,927 --> 00:12:30,331
+ressaisie à la main, dépôt manuel des PDF.
+
+169
+00:12:30,881 --> 00:12:36,373
+Si elle utilise myCuma Infinity, elle
+paie quand même la plateforme du réseau,
+
+170
+00:12:36,413 --> 00:12:41,945
+dont le tarif a été négocié sur
+le volume de tout le réseau.
+
+171
+00:12:43,795 --> 00:12:48,861
+En cas de changement de plateforme,
+il n’y a ni portabilité automatique,
+
+172
+00:12:48,901 --> 00:12:51,880
+ni obligation légale de
+transférer les documents.
+
+173
+00:12:52,430 --> 00:12:57,071
+La loi impose aux plateformes
+de les conserver deux ans ;
+
+174
+00:12:57,111 --> 00:12:59,664
+celle du réseau en propose dix.
+
+175
+00:13:00,214 --> 00:13:04,469
+C’est à vous de récupérer vos
+documents avant de partir.
+
+176
+00:13:06,319 --> 00:13:12,237
+Côté administration fiscale, la réforme
+change le canal, pas les règles de fond :
+
+177
+00:13:12,277 --> 00:13:16,532
+dette, paiement, comptabilisation et
+déduction de TVA restent les mêmes.
+
+178
+00:13:17,082 --> 00:13:21,337
+Votre obligation d’émettre des factures
+électroniques commence en septembre 2027.
+
+179
+00:13:23,187 --> 00:13:29,956
+Une facture reçue par e-mail, en PDF
+ou sur papier se traite et se paie ;
+
+180
+00:13:29,996 --> 00:13:35,102
+sa TVA se déduit si l’opération est
+réelle et les mentions présentes.
+
+181
+00:13:35,652 --> 00:13:40,719
+Si la même facture arrive par deux
+canaux, et que numéro, fournisseur,
+
+182
+00:13:40,759 --> 00:13:44,548
+date et montants concordent,
+c’est une seule facture :
+
+183
+00:13:44,588 --> 00:13:48,844
+l’une sert au paiement, l’autre
+est marquée « duplicata ».
+
+184
+00:13:49,044 --> 00:13:51,597
+Jamais deux paiements, ni deux TVA.
+
+185
+00:13:51,947 --> 00:13:56,588
+Si votre logiciel n’affiche pas une
+facture, signalez-le à votre fédération,
+
+186
+00:13:56,628 --> 00:14:00,843
+à votre centre comptable
+ou au support de la SAS,
+
+187
+00:14:00,883 --> 00:14:03,436
+et appliquez un traitement
+transitoire tracé.
+
+188
+00:14:03,636 --> 00:14:08,317
+Un souci de paramétrage ne justifie
+pas de retarder un paiement.
+
+189
+00:14:09,967 --> 00:14:15,033
+Une difficulté réelle, documentée et vite
+corrigée n’est pas sanctionnée d’emblée :
+
+190
+00:14:15,073 --> 00:14:19,714
+en réception, une mise en demeure
+de trois mois précède l’amende,
+
+191
+00:14:19,754 --> 00:14:25,286
+et une tolérance de délai a été
+accordée au moins jusqu’à fin 2026.
+
+192
+00:14:25,836 --> 00:14:28,815
+L’obligation, elle, n’est
+ni reportée ni suspendue.
+
+193
+00:14:29,365 --> 00:14:34,431
+Gardez donc les pièces de votre démarche :
+factures reçues, preuves d’incident,
+
+194
+00:14:34,471 --> 00:14:38,727
+échanges avec l’éditeur ou le centre
+comptable, tickets de support.
+
+195
+00:14:40,765 --> 00:14:42,467
+Plusieurs évolutions sont annoncées.
+
+196
+00:14:43,017 --> 00:14:47,232
+En cours : une lettre d’information
+reprenant les fiches pratiques,
+
+197
+00:14:47,272 --> 00:14:51,062
+la désactivation des comptes
+inactifs depuis plus d’un an,
+
+198
+00:14:51,102 --> 00:14:55,357
+et le traitement des mandats bloqués
+et des erreurs d’inscription.
+
+199
+00:14:55,907 --> 00:14:59,272
+Les statuts inutiles, comme
+l’approbation partielle ou l’annulation,
+
+200
+00:14:59,312 --> 00:15:01,014
+seront retirés de l’affichage.
+
+201
+00:15:01,564 --> 00:15:07,056
+À confirmer : un affichage paramétré par
+défaut, une alerte de base automatique,
+
+202
+00:15:07,096 --> 00:15:10,034
+la transmission des notes
+vers la comptabilité,
+
+203
+00:15:10,074 --> 00:15:17,309
+et le choix entre les libellés « prise en
+charge » et « approuvé par l’acheteur ».
+
+204
+00:15:19,159 --> 00:15:23,414
+Pour toute question, adressez-vous
+à votre référent Fédération ou AGC.
+
