@@ -16,7 +16,7 @@ Hors périmètre, pour plus tard :
 
 ## Contraintes
 
-- Aucune modification de la narration ni des textes à l'écran : on choisit quelles scènes sont jouées, on ne réécrit rien. Seule exception possible, à trancher : le point ouvert 1 ci-dessous.
+- Aucune modification de la narration ni des textes à l'écran : on choisit quelles scènes sont jouées, on ne réécrit rien. Seule exception : l'ouverture d'une vidéo filtrée perd sa phrase d'annonce des parties (voir « Décision » en fin de document).
 - Tout en français, charte du projet (tokens de `styles.css`, Montserrat, IBM Plex).
 - La vidéo complète reste inchangée quand aucune sélection n'est donnée, y compris le rendu MP4 et `npm run texts`.
 
@@ -98,9 +98,10 @@ La page de composition n'existe que dans la version en dossier (`dist/rfe-zeendo
 - Page de composition : cases de chapitre (tout, rien, partiel), reprise d'un lien, copie, lien calculé en local et sur le domaine hébergé.
 - Écoute dans Edge ou Chrome, faite par l'utilisateur.
 
-## Point ouvert à trancher par l'utilisateur
+## Décision : ouverture d'une vidéo filtrée
 
-1. **Ouverture d'une vidéo filtrée.** La deuxième phrase de l'ouverture annonce les quatre parties (« Cette vidéo présente la connexion, le paramétrage, l'usage au quotidien, puis les informations générales à connaître. ») et s'accompagne des quatre pastilles de chapitre. Dans un extrait, cette annonce est inexacte. Options :
-   - a. garder l'ouverture telle quelle, même si elle annonce des parties absentes ;
-   - b. dans une vidéo filtrée seulement, retirer cette phrase et les quatre pastilles : l'ouverture se limite au titre et à la première phrase (recommandé, aucun texte nouveau) ;
-   - c. écrire une variante de cette phrase pour les extraits : nouveau texte, donc accord explicite requis sur sa formulation.
+La deuxième phrase de l'ouverture annonce les quatre parties (« Cette vidéo présente la connexion, le paramétrage, l'usage au quotidien, puis les informations générales à connaître. ») et s'accompagne des quatre pastilles de chapitre. Dans un extrait, cette annonce serait inexacte.
+
+Retenu par l'utilisateur le 28 septembre 2026 (option b) : dans une vidéo filtrée seulement, cette phrase et les quatre pastilles sont retirées. L'ouverture se limite au titre et à la première phrase. Aucun texte nouveau. La vidéo complète garde son ouverture actuelle.
+
+Options écartées : garder l'ouverture telle quelle (a) ; écrire une variante de la phrase (c).
