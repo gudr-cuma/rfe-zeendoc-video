@@ -12,5 +12,5 @@ for k, v in [('%%FONTS%%', fcss), ('%%CSS%%', read('styles.css')), ('%%PICTO%%',
     h = h.replace(k, v)
 DIST.mkdir(exist_ok=True)
 out = DIST / 'rfe-zeendoc-video.html'
-out.write_text(h, encoding='utf-8')
+out.write_text(h, encoding='utf-8', newline='\n')
 print(f'{out.relative_to(ROOT)} : {len(h.encode()) / 1e6:.2f} Mo')

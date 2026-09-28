@@ -13,9 +13,9 @@ fcss = ''
 for n, w, p in FONTS:
     fn = p.split('/')[-1] + '.woff2'; shutil.copy(FONTSRC / (p + '.woff2'), S / 'fonts' / fn)
     fcss += f"@font-face{{font-family:'{n}';font-weight:{w};font-style:normal;font-display:block;src:url('../fonts/{fn}') format('woff2')}}\n"
-(S / 'css' / 'styles.css').write_text(fcss + read('styles.css'), encoding='utf-8')
+(S / 'css' / 'styles.css').write_text(fcss + read('styles.css'), encoding='utf-8', newline='\n')
 (S / 'js' / 'assets.js').write_text('/* Remplacer un fichier du dossier img/ en gardant le même nom suffit. */\nconst A='
-                                    + json.dumps(assets, indent=1, ensure_ascii=False) + ';\n', encoding='utf-8')
+                                    + json.dumps(assets, indent=1, ensure_ascii=False) + ';\n', encoding='utf-8', newline='\n')
 for n in ['lib.js', 'scenes.js', 'engine.js']:
     shutil.copy(SRC / n, S / 'js' / n)
 h = read('shell.html')
@@ -24,6 +24,6 @@ h = h.replace('%%PICTO%%', 'img/picto.png')
 h = h.replace('<script>\nconst A=%%ASSETS%%;\n%%LIB%%\n%%SCENES%%\n%%ENGINE%%\n</script>',
               '<script src="js/assets.js"></script>\n<script src="js/lib.js"></script>\n<script src="js/scenes.js"></script>\n<script src="js/engine.js"></script>')
 assert '%%' not in h, 'Balise %% non remplacée dans shell.html'
-(S / 'index.html').write_text(h, encoding='utf-8')
+(S / 'index.html').write_text(h, encoding='utf-8', newline='\n')
 shutil.copy(ROOT / 'scripts' / 'LISEZMOI-hebergement.md', S / 'LISEZMOI.md')
 print(f'{S.relative_to(ROOT)}/ prêt')

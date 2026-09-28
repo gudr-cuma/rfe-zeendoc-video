@@ -34,7 +34,7 @@ for sc in TL:
             t += 0.2
 for i in range(len(subs) - 1):
     subs[i][1] = min(subs[i][1], subs[i + 1][0] - 0.04)
-with open(DIST / 'rfe-zeendoc-tresoriers.srt', 'w', encoding='utf-8') as f:
+with open(DIST / 'rfe-zeendoc-tresoriers.srt', 'w', encoding='utf-8', newline='\n') as f:
     for i, (a, b, s) in enumerate(subs, 1): f.write(f'{i}\n{ts(a)} --> {ts(b)}\n{lines2(s)}\n\n')
 total = TL[-1]['end']
 md = ['# Facturation électronique : vos factures fournisseur dans Zeendoc', '',
@@ -48,5 +48,5 @@ for sc in TL:
         md += [f"## {sc['title']}", '', f"*{mmss(sc['start'])} : carton de chapitre, sans narration.*", '']; continue
     md += [f"### {sc['num']} {sc['title']}" if sc['num'] else f"## {sc['title']}", '']
     md += [f"**{mmss(c['start'])}** {fr(c['text'])}\n" for c in sc['cues'] if c['text']]
-(DIST / 'rfe-zeendoc-script-narration.md').write_text('\n'.join(md), encoding='utf-8')
+(DIST / 'rfe-zeendoc-script-narration.md').write_text('\n'.join(md), encoding='utf-8', newline='\n')
 print(f'{len(subs)} sous-titres, durée {mmss(total)}')
