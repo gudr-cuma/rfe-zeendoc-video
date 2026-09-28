@@ -382,7 +382,7 @@ body.render [data-c]{will-change:opacity,transform}body.render .scene{will-chang
     <div class="stage" id="stage"></div>
     <div class="startov" id="startov">
       <button class="bigplay" id="startBtn"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="6 4 20 12 6 20 6 4"/></svg>Lancer la vidéo</button>
-      <p>La narration est lue par la voix de synthèse de votre navigateur. Durée : environ 15 minutes.</p>
+      <p>La narration est lue par la voix de synthèse de votre navigateur. Durée : <span id="dur">environ 15 minutes</span>.</p>
     </div>
   </div>
   <div class="prog" id="prog" role="presentation"><div class="fill" id="fill"></div></div>
@@ -1077,9 +1077,14 @@ const toSpeech=t=>SAY.reduce((s,[a,b])=>s.replace(a,b),t);
 const words=t=>{t=(t||'').trim();return t?t.split(/\s+/).length:0;};
 const splitS=t=>t.split(/(?<=[.!?…])\s+(?=[A-ZÀÂÇÉÈÊËÎÏÔÛÙÜŸ«0-9])/).filter(Boolean);
 
+/* ---------- extrait à la carte (?s=1.1-1.4,3.2) ---------- */
+const SEL=parseSel(new URLSearchParams(location.search).get('s'),SC.filter(s=>s.kind==='content').map(s=>s.num));
+if(SEL)SC.splice(0,SC.length,...selectScenes(SC,SEL));
+const CHS=[1,2,3,4].filter(n=>SC.some(s=>s.kind==='chap'&&s.ch===n));
+
 /* ---------- build DOM ---------- */
 const stage=document.getElementById('stage');
-function rail(ch){return `<div class="rail"><img src="${A.picto}" alt=""><div class="brand">Facturation électronique<small>Vos factures fournisseur dans Zeendoc</small></div><div class="tabs">${[1,2,3,4].map(n=>`<div class="tab${n===ch?' cur':n<ch?' done':''}"><b>${n}</b>${CH[n]}</div>`).join('')}</div></div>`;}
+function rail(ch){return `<div class="rail"><img src="${A.picto}" alt=""><div class="brand">Facturation électronique<small>Vos factures fournisseur dans Zeendoc</small></div><div class="tabs">${CHS.map(n=>`<div class="tab${n===ch?' cur':n<ch?' done':''}"><b>${n}</b>${CH[n]}</div>`).join('')}</div></div>`;}
 function wrap(s){
   if(s.kind!=='content') return s.html;
   return `<div class="ledger"></div>${rail(s.ch)}<div class="mnum">${s.num}</div><h2 class="title">${s.title}</h2><div class="body">${s.html}</div><div class="foot"><span class="url">ged.cuma.fr</span><span>${s.src||'Réseau Cuma, état en septembre 2026'}</span></div>`;
@@ -1163,6 +1168,7 @@ const $=id=>document.getElementById(id);
 const hasTTS='speechSynthesis' in window&&'SpeechSynthesisUtterance' in window;
 const P={playing:false,started:false,vt:0,last:0,si:0,prev:-1,t0:0,c0:[],ci:-1,phase:'idle',until:0,sents:[],sj:0,tok:0,
   voice:null,voiceOn:hasTTS,rate:1,waitSpeech:false,sentT0:0,sentEst:0,cueMinEnd:0,respeak:false,captions:true};
+if(SEL){const m=Math.max(1,Math.round(TOTAL/60));$('dur').textContent='environ '+m+' minute'+(m>1?'s':'');}
 
 function caption(t){const c=$('cap');c.textContent=t?fr(t).replace(/'/g,'’'):'';}
 function cancelSpeech(){P.tok++;P.waitSpeech=false;if(hasTTS){try{speechSynthesis.cancel();}catch(e){}}}
@@ -1225,7 +1231,7 @@ TL.forEach(sc=>{if(SC[sc.si].kind==='chap'){const d=document.createElement('i');
 /* chapter navigation */
 (function(){const nav=$('chapters');const groups=[{n:0,name:'Ouverture et clôture',items:[]},{n:1,items:[]},{n:2,items:[]},{n:3,items:[]},{n:4,items:[]}];
   SC.forEach((s,i)=>{if(s.kind==='content')groups[s.ch].items.push([i,s.num,s.title]);else if(s.kind==='intro'||s.kind==='outro')groups[0].items.push([i,'',s.title]);});
-  [1,2,3,4,0].forEach(g=>{const G=groups[g];const sec=document.createElement('section');
+  [1,2,3,4,0].forEach(g=>{const G=groups[g];if(!G.items.length)return;const sec=document.createElement('section');
     sec.innerHTML=`<h2>${g?g+'. '+CH[g]:G.name}</h2><ol>${G.items.map(([i,n,t])=>`<li><button data-si="${i}"><span>${n}</span>${fr(t)}</button></li>`).join('')}</ol>`;nav.appendChild(sec);});
   nav.addEventListener('click',e=>{const b=e.target.closest('button');if(b)jump(+b.dataset.si);});})();
 /* voices */
