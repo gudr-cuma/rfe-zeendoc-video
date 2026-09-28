@@ -21,6 +21,7 @@ Projet de l'activité salariée (réseau Cuma). Ne jamais utiliser les chartes, 
 - `src/lib.js` : icônes et mini-langage de description des scènes.
 - `src/scenes.js` : les 32 scènes (visuels et narration). C'est le fichier à modifier pour le contenu.
 - `src/engine.js` : ligne de temps, rendu, lecteur avec voix de synthèse.
+- `src/composer.html`, `src/composer.js` : page de composition d'extraits (`/composer/`).
 - `assets/*.png` : captures et logos. Le nom de fichier sert de clé (`A.f06_param`…).
 - `scripts/` : construction, rendu MP4 et génération des textes.
 - `dist/` : livrables générés.
@@ -33,7 +34,13 @@ npm run build               # dist/rfe-zeendoc-video.html (fichier unique) + dis
 npm run texts               # dist/timeline.json, sous-titres .srt, script de narration minuté
 npm run render:test         # rendu d'essai sur 60 images -> dist/test-rendu.mp4
 npm run render              # rendu complet -> dist/rfe-zeendoc-tresoriers.mp4 (plusieurs minutes) + textes
+npm test                    # tests de l'analyse du paramètre s (parseSel, compactSel, selectScenes)
+npm run check               # vidéo complète identique à build/reference.json + contrôles des extraits
 ```
+
+`build/reference.json` (local, non versionné) est la référence de la vidéo complète : `node scripts/check_video.mjs --save build/reference.json`. La régénérer seulement après une modification volontaire de la vidéo complète.
+
+**Mise en ligne** : Cloudflare Pages publie `dist/rfe-zeendoc` tel qu'il est dans le dépôt GitHub `gudr-cuma/rfe-zeendoc-video` (branche `main`), sans commande de construction. Lancer `npm run build` et committer `dist/` avant chaque push, sinon le site publié ne reflète pas les sources.
 
 Le rendu nécessite ffmpeg 5.1 ou plus récent (option `-fps_mode`). Options de `scripts/render.mjs` :
 - `--workers N` : pages en parallèle ;
@@ -84,6 +91,14 @@ Chaque scène appartient à l'un de ces types :
   - la voix de synthèse du navigateur lit la narration phrase par phrase ;
   - les remplacements de prononciation sont regroupés dans `SAY` ;
   - sans voix française, la vidéo défile avec les sous-titres.
+
+### Vidéo à la carte
+
+- `?s=1.1-1.4,3.2` : le lecteur (et le mode rendu) ne joue que ces scènes de contenu, dans l'ordre de la vidéo, avec l'ouverture et la clôture. Paramètre absent, vide ou sans numéro reconnu : vidéo complète.
+- Les numéros de scène sont des identifiants de lien : ne pas renuméroter sans table de correspondance.
+- `selectScenes()` (`src/lib.js`) : l'ouverture passe par `brief()` (sans la phrase d'annonce des parties ni les pastilles), chaque carton par `card(rangs)`, les chapitres sans scène retenue disparaissent. L'écran de lancement affiche la durée de l'extrait.
+- Page de composition : `src/composer.html` et `src/composer.js`, publiée en `dist/rfe-zeendoc/composer/` (version en dossier seulement). Non liée depuis le lecteur, `noindex`.
+- Spec : `docs/superpowers/specs/2026-09-28-video-a-la-carte-design.md`.
 
 ### Charte
 

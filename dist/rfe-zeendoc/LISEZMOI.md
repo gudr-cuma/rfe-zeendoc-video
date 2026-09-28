@@ -11,12 +11,17 @@ Pour un test sur votre poste, lancez un petit serveur local dans le dossier (par
 ## Contenu du dossier
 
 - `index.html` : la page et le lecteur.
+- `composer/` : la page de composition d'extraits.
 - `css/styles.css` : la mise en forme.
 - `js/scenes.js` : les 32 scènes, avec leurs textes à l'écran et la narration.
 - `js/engine.js` : l'animation et la lecture par la voix de synthèse.
 - `js/assets.js` : la liste des images.
 - `img/` : les captures des fiches et les logos.
 - `fonts/` : les polices Montserrat et IBM Plex (licence SIL Open Font License).
+
+## Extraits à la carte
+
+La page `composer/` permet de cocher quelques chapitres ou scènes et de copier un lien vers le lecteur limité à cet extrait, par exemple `…/?s=1.1-1.4,3.2`. Le lien contient toute la sélection : rien n'est enregistré sur le serveur. La page de composition n'est pas liée depuis la vidéo ; communiquez son adresse aux seules personnes qui diffusent.
 
 ## Remplacer une capture
 
