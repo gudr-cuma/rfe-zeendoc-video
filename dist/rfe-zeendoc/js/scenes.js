@@ -3,26 +3,30 @@ const SC=[];
 const DGFIP='Source : DGFiP, guide pratique de démarrage au 1er septembre 2026 (juillet 2026)';
 function content(d){SC.push(Object.assign({kind:'content'},d));}
 function chapter(n,items){
-  SC.push({kind:'chap',ch:n,title:'Chapitre '+n+' : '+CH[n],html:`
+  /* ranks : rangs retenus (1 = n.1). Vidéo complète : tous les rangs. */
+  const card=ranks=>`
   <div class="bign"${R(0,0)}>${n}<i></i></div>
   ${hills()}
   <div class="ckick"${R(0,.15)}>Chapitre ${n}</div>
   <h2 class="ctitle"${R(0,.25)}>${CH[n]}</h2>
-  <ol class="clist${CH[n].length>14?' long':''}">${items.map((t,k)=>`<li${R(0,.55+k*.1)}><span>${n}.${k+1}</span>${t}</li>`).join('')}</ol>`,
+  <ol class="clist${CH[n].length>14?' long':''}">${ranks.map((r,k)=>`<li${R(0,.55+k*.1)}><span>${n}.${r}</span>${items[r-1]}</li>`).join('')}</ol>`;
+  SC.push({kind:'chap',ch:n,title:'Chapitre '+n+' : '+CH[n],html:card(items.map((t,k)=>k+1)),card,
   cues:[{t:'',dur:3.6}]});
 }
 
 /* ================= OUVERTURE ================= */
-SC.push({kind:'intro',title:'Ouverture',html:`
+function intro(full){return {kind:'intro',title:'Ouverture',html:`
   ${hills()}
   <img class="ipicto"${R(0,0)} src="${A.picto}" alt="Logo Cuma">
   <div class="ikick"${R(0,.25)}>Facturation électronique</div>
   <h1 class="ititle"${R(0,.4)}>Vos factures fournisseur<br>dans Zeendoc</h1>
-  <p class="isub"${R(0,.7)}>Pour les trésoriers de Cuma, état en septembre 2026</p>
-  <div class="isum">${[1,2,3,4].map((n,k)=>`<div class="ichip"${R(1,[1.2,2.1,3.0,4.1][k])}><b>${n}</b>${CH[n]}</div>`).join('')}</div>`,
+  <p class="isub"${R(0,.7)}>Pour les trésoriers de Cuma, état en septembre 2026</p>${full?`
+  <div class="isum">${[1,2,3,4].map((n,k)=>`<div class="ichip"${R(1,[1.2,2.1,3.0,4.1][k])}><b>${n}</b>${CH[n]}</div>`).join('')}</div>`:''}`,
   cues:[
   'Depuis le 1er septembre 2026, votre Cuma doit pouvoir recevoir ses factures fournisseur via une plateforme agréée. Dans le réseau Cuma, vous les retrouvez dans Zeendoc.',
-  "Cette vidéo présente la connexion, le paramétrage, l'usage au quotidien, puis les informations générales à connaître."]});
+  ...(full?["Cette vidéo présente la connexion, le paramétrage, l'usage au quotidien, puis les informations générales à connaître."]:[])]};}
+/* extrait à la carte : l'ouverture perd l'annonce des quatre parties (décision du 28 septembre 2026) */
+SC.push(Object.assign(intro(true),{brief:()=>intro(false)}));
 
 /* ================= 1 CONNEXION ================= */
 chapter(1,['Le site','Activer votre compte','Accès perdu','Changement de trésorier']);

@@ -463,32 +463,60 @@ let HID=0;
 function hills(){const id='hc'+(HID++);return `<svg class="hills" viewBox="0 0 1920 1080" aria-hidden="true"><defs><clipPath id="${id}"><ellipse cx="380" cy="1470" rx="1260" ry="800"/></clipPath></defs><ellipse cx="380" cy="1470" rx="1260" ry="800" fill="#079959"/><ellipse cx="1720" cy="1530" rx="1240" ry="790" fill="#9AC035"/><ellipse cx="1720" cy="1530" rx="1240" ry="790" fill="#63B336" clip-path="url(#${id})"/></svg>`;}
 /* French typography: narrow no-break space before : ; ? ! » and after « */
 function fr(s){return s.replace(/ ([:;?!»])/g,'\u202F$1').replace(/« /g,'«\u202F');}
+/* Extrait à la carte : paramètre s="1.1-1.4,3.2" <-> numéros de scène, toujours dans l'ordre de la vidéo.
+   nums = numéros des scènes de contenu, dans l'ordre. Rien de reconnu : null (vidéo complète). */
+function parseSel(str,nums){
+  if(!str)return null;const pos=new Map(nums.map((n,i)=>[n,i])),on=new Set();
+  for(const tok of String(str).split(',')){const m=tok.trim().match(/^(\d+\.\d+)(?:-(\d+\.\d+))?$/);if(!m)continue;
+    const a=pos.get(m[1]),b=pos.get(m[2]||m[1]);if(a==null||b==null)continue;
+    for(let i=Math.min(a,b);i<=Math.max(a,b);i++)on.add(i);}
+  return on.size?[...on].sort((x,y)=>x-y).map(i=>nums[i]):null;}
+function compactSel(sel,nums){
+  const pos=new Map(nums.map((n,i)=>[n,i])),ch=n=>n.split('.')[0];
+  const ix=[...new Set(sel)].map(n=>pos.get(n)).filter(i=>i!=null).sort((x,y)=>x-y),out=[];
+  for(let k=0;k<ix.length;){let j=k;
+    while(j+1<ix.length&&ix[j+1]===ix[j]+1&&ch(nums[ix[j+1]])===ch(nums[ix[k]]))j++;
+    out.push(j>k?nums[ix[k]]+'-'+nums[ix[j]]:nums[ix[k]]);k=j+1;}
+  return out.join(',');}
+/* Scènes jouées pour une sélection : ouverture réduite (brief), cartons refaits (card), chapitres vides retirés.
+   Renvoie de nouveaux objets : sc n'est pas modifié. */
+function selectScenes(sc,sel){const keep=new Set(sel);
+  return sc.flatMap(s=>{
+    if(s.kind==='intro')return [Object.assign({},s,s.brief())];
+    if(s.kind==='chap'){const ranks=sc.filter(c=>c.kind==='content'&&c.ch===s.ch&&keep.has(c.num)).map(c=>+c.num.split('.')[1]);
+      return ranks.length?[Object.assign({},s,{html:s.card(ranks)})]:[];}
+    if(s.kind==='content')return keep.has(s.num)?[s]:[];
+    return [s];});}
 
 const CH=['','Connexion','Paramétrage','Usage','Informations générales'];
 const SC=[];
 const DGFIP='Source : DGFiP, guide pratique de démarrage au 1er septembre 2026 (juillet 2026)';
 function content(d){SC.push(Object.assign({kind:'content'},d));}
 function chapter(n,items){
-  SC.push({kind:'chap',ch:n,title:'Chapitre '+n+' : '+CH[n],html:`
+  /* ranks : rangs retenus (1 = n.1). Vidéo complète : tous les rangs. */
+  const card=ranks=>`
   <div class="bign"${R(0,0)}>${n}<i></i></div>
   ${hills()}
   <div class="ckick"${R(0,.15)}>Chapitre ${n}</div>
   <h2 class="ctitle"${R(0,.25)}>${CH[n]}</h2>
-  <ol class="clist${CH[n].length>14?' long':''}">${items.map((t,k)=>`<li${R(0,.55+k*.1)}><span>${n}.${k+1}</span>${t}</li>`).join('')}</ol>`,
+  <ol class="clist${CH[n].length>14?' long':''}">${ranks.map((r,k)=>`<li${R(0,.55+k*.1)}><span>${n}.${r}</span>${items[r-1]}</li>`).join('')}</ol>`;
+  SC.push({kind:'chap',ch:n,title:'Chapitre '+n+' : '+CH[n],html:card(items.map((t,k)=>k+1)),card,
   cues:[{t:'',dur:3.6}]});
 }
 
 /* ================= OUVERTURE ================= */
-SC.push({kind:'intro',title:'Ouverture',html:`
+function intro(full){return {kind:'intro',title:'Ouverture',html:`
   ${hills()}
   <img class="ipicto"${R(0,0)} src="${A.picto}" alt="Logo Cuma">
   <div class="ikick"${R(0,.25)}>Facturation électronique</div>
   <h1 class="ititle"${R(0,.4)}>Vos factures fournisseur<br>dans Zeendoc</h1>
-  <p class="isub"${R(0,.7)}>Pour les trésoriers de Cuma, état en septembre 2026</p>
-  <div class="isum">${[1,2,3,4].map((n,k)=>`<div class="ichip"${R(1,[1.2,2.1,3.0,4.1][k])}><b>${n}</b>${CH[n]}</div>`).join('')}</div>`,
+  <p class="isub"${R(0,.7)}>Pour les trésoriers de Cuma, état en septembre 2026</p>${full?`
+  <div class="isum">${[1,2,3,4].map((n,k)=>`<div class="ichip"${R(1,[1.2,2.1,3.0,4.1][k])}><b>${n}</b>${CH[n]}</div>`).join('')}</div>`:''}`,
   cues:[
   'Depuis le 1er septembre 2026, votre Cuma doit pouvoir recevoir ses factures fournisseur via une plateforme agréée. Dans le réseau Cuma, vous les retrouvez dans Zeendoc.',
-  "Cette vidéo présente la connexion, le paramétrage, l'usage au quotidien, puis les informations générales à connaître."]});
+  ...(full?["Cette vidéo présente la connexion, le paramétrage, l'usage au quotidien, puis les informations générales à connaître."]:[])]};}
+/* extrait à la carte : l'ouverture perd l'annonce des quatre parties (décision du 28 septembre 2026) */
+SC.push(Object.assign(intro(true),{brief:()=>intro(false)}));
 
 /* ================= 1 CONNEXION ================= */
 chapter(1,['Le site','Activer votre compte','Accès perdu','Changement de trésorier']);
